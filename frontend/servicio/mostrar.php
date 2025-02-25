@@ -161,9 +161,8 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
                                                             echo '<span class="badge badge-success">PAGADO</span>';
                                                         } else {
                                                             echo '<span class="badge badge-danger">NO PAGADO</span> ';
-                                                            echo '<span class="badge badge-warning">$' . number_format($due,2) . '</span>';
-                                                            // Botón de pagar, visible solo si hay deuda
-                                                            echo ' <a href="../servicio/pagar.php?id=' . $g->idservc . '" class="btn btn-info btn-sm">PAGAR</a>';
+                                                            echo '<span class="badge badge-warning"> Debe: $'  . number_format($due,2) . '</span>';
+                                                            
                                                         }
                                                     ?>
                                                 </td>
@@ -183,6 +182,8 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
                                         <?php endforeach; ?>
                                     </tbody>
                                 </table>
+                                <!-- Botón de Abono de Pagos -->
+                                <a href="abono.php" class="btn btn-success text-white">Abono de Pagos</a>
                             <?php else : ?>
                                 <!-- Warning Alert -->
                                 <div class="alert alert-warning" role="alert">
@@ -195,6 +196,9 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
             </div>
         </div>
     </div>
+
+
+
     </div>
 
     <!-- Optional JavaScript -->
