@@ -15,7 +15,7 @@ ob_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-        <title>SMAF GYM</title>
+        <title>BIKRAM YOGA</title>
          <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../../backend/css/bootstrap.min.css">
          <!----css3---->
@@ -41,7 +41,7 @@ ob_start();
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3><img src="../../backend/img/favicon.webp" class="img-fluid"/><span>SMAF GYM</span></h3>
+                <h3><img src="../../backend/img/favicon.webp" class="img-fluid"/><span>BIKRAM YOGA</span></h3>
             </div>
             <ul class="list-unstyled components">
                <li  class="">
@@ -191,7 +191,7 @@ ob_start();
         <!-- Page Content  -->
         <div id="content">
           <div class='pre-loader'>
-    <img class='loading-gif' alt='loading' src="https://media.giphy.com/media/TPFdnUyWNNQYMke6gU/giphy.gif"/>
+
 </div>
           <div class="top-navbar">
             <nav class="navbar navbar-expand-lg">
@@ -250,7 +250,7 @@ ob_start();
 </nav>
                             <div class="card" style="min-height: 485px">
                                 <div class="card-header card-header-text">
-                                    <h4 class="card-title">¿Estás seguro de que quieres desactivarlo?</h4>
+                                    <h4 class="card-title">¿Estás seguro de que quieres eliminarlo?</h4>
                                     <p class="category">Desactivar  plan reciente añadidos el dia de hoy</p>
                                 </div>
                                 
@@ -290,7 +290,7 @@ if($sentencia){
     <hr>
 <div class="form-group">
         <div class="col-sm-12">
-            <button name='studltplan' class="btn btn-success text-white">Guardar</button>                       
+            <button name='studltplan' class="btn btn-success text-white">Eliminar</button>                       
             <a class="btn btn-danger text-white" href="../plan/mostrar.php">Cancelar</a>
         </div>
     </div>

@@ -15,12 +15,11 @@ ob_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-        <title>SMAF GYM</title>
+        <title>BIKRAM YOGA</title>
          <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../../backend/css/bootstrap.min.css">
          <!----css3---->
         <link rel="stylesheet" href="../../backend/css/custom.css">
-        <link rel="stylesheet" href="../../backend/css/loader.css">
 
              
           <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
@@ -31,7 +30,7 @@ ob_start();
      <!--google material icon-->
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
       rel="stylesheet">
-      <link rel="icon" type="image/png" href="../../backend/img/bikram_yoga .jpg"/>
+      <link rel="icon" type="image/jpg" href="../../backend/img/yoga2.jpg"/>
   </head>
   <body>
   
@@ -41,7 +40,7 @@ ob_start();
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3><img src="../../backend/img/bikram_yoga .jpg" class="img-fluid"/><span>SMAF GYM</span></h3>
+                <h3><img src="../../backend/img/bikram_yoga.jpg" class="img-fluid"/><span>BIKRAM</span></h3>
             </div>
             <ul class="list-unstyled components">
                <li  class="">
@@ -93,95 +92,17 @@ ob_start();
                        
                     </ul>
                 </li>
-                      <li class="dropdown">
-                    <a href="#pageSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                         <i class="material-icons">conveyor_belt</i><span>Productos</span></a>
-                    <ul class="collapse list-unstyled menu" id="pageSubmenu4">
-                        <li>
-                            <a href="../producto/mostrar.php">Mostrar</a>
-                        </li>
-                        <li>
-                            <a href="../producto/nuevo.php">Nuevo</a>
-                        </li>
-                    </ul>
-                </li>
-                    
-                    <li class="dropdown ">
-                    <a href="#pageSubmenu5" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                         <i class="material-icons">category</i><span>Categorias</span></a>
-                    <ul class="collapse list-unstyled menu" id="pageSubmenu5">
-                        <li class="">
-                            <a href="../categoria/mostrar.php">Mostrar</a>
-                        </li>
-                        <li>
-                            <a href="../categoria/nuevo.php">Nuevo</a>
-                        </li>
-                    </ul>
-                </li>
-               
-                  
-                  
-                  <li class="dropdown">
-                    <a href="#pageSubmenu6" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                         <i class="material-icons">point_of_sale</i><span>Ventas</span></a>
-                    <ul class="collapse list-unstyled menu" id="pageSubmenu6">
-                        <li>
-                            <a href="../venta/mostrar.php">Mostrar</a>
-                        </li>
-                        <li>
-                            <a href="../venta/nuevo.php">Nuevo</a>
-                        </li>
-                    </ul>
-                </li>
+                      
+                   
+            
 
-                 <li class="dropdown">
-                    <a href="#pageSubmenu09" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                         <i class="material-icons">shopping_basket</i><span>Compras</span></a>
-                    <ul class="collapse list-unstyled menu" id="pageSubmenu09">
-                        <li>
-                            <a href="../compra/mostrar.php">Mostrar</a>
-                        </li>
-                        <li>
-                            <a href="../compra/nuevo.php">Nuevo</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="dropdown">
-                    <a href="#pageSubmenu010" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                         <i class="material-icons">savings</i><span>Gastos</span></a>
-                    <ul class="collapse list-unstyled menu" id="pageSubmenu010">
-                        <li>
-                            <a href="../gastos/mostrar.php">Mostrar</a>
-                        </li>
-                        <li>
-                            <a href="../gastos/nuevo.php">Nuevo</a>
-                        </li>
-                    </ul>
-                </li>
-               
+                 
                   
-                    <li class="dropdown">
-                    <a href="#pageSubmenu7" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                         <i class="material-icons">signal_cellular_alt</i><span>Reportes</span></a>
-                    <ul class="collapse list-unstyled menu" id="pageSubmenu7">
-                        <li>
-                            <a href="../reporte/productos.php">Productos</a>
-                        </li>
-                        <li>
-                            <a href="../reporte/clientes.php">Clientes</a>
-                        </li>
-                        <li>
-                            <a href="../reporte/ventas.php">Ventas</a>
-                        </li>
-                    </ul>
-                </li>
+                  
                 <li class="">
                     <a href="../graficos/mostrar.php"><i class="material-icons">grain</i><span>Graficos</span></a>
                 </li>
-               <li class="">
-                    <a href="../cuenta/configuracion.php"><i class="material-icons">settings</i><span>Configuracion</span></a>
-                </li>
+             
                    
             </ul>
 
@@ -190,7 +111,7 @@ ob_start();
         <!-- Page Content  -->
         <div id="content">
           <div class='pre-loader'>
-    <img class='loading-gif' alt='loading' src="https://media.giphy.com/media/TPFdnUyWNNQYMke6gU/giphy.gif"/>
+    
 </div>
           <div class="top-navbar">
             <nav class="navbar navbar-expand-lg">

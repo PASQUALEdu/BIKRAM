@@ -175,7 +175,6 @@ ul, ol {
   background-color: rgba(106,27,154,0.2);
 }
 .dropdown-toggle::after {
-  content: '▾';
   position: absolute;
   right: 10px;
   top: 23px;

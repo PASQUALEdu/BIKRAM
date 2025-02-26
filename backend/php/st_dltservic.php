@@ -1,12 +1,10 @@
 <?php
-// Asegúrate de haber incluido la conexión ($connect) previamente o inclúyela aquí
 if(isset($_POST['stdltserv']))
 {
     $idservc = $_POST['txtidc'];
     
     try {
 
-        // Se utiliza DELETE para eliminar el servicio de forma permanente
         $query = "DELETE FROM servicio WHERE idservc = :idservc LIMIT 1";
         $statement = $connect->prepare($query);
 

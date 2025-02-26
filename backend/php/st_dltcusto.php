@@ -1,40 +1,35 @@
 <?php
-  
-
-  if(isset($_POST['stdltcst']))
+// Asegúrate de que la conexión ($connect) esté disponible, ya sea incluyéndola aquí o en otro archivo.
+if(isset($_POST['stdltcst']))
 {
-    $idclie = $_POST['txtidc'];
+    $idclient = $_POST['txtidc'];
     
     try {
-
-        $query = "UPDATE clientes SET  estad='Inactivo' WHERE idclie=:idclie LIMIT 1";
+        // Sentencia DELETE para eliminar el cliente permanentemente
+        $query = "DELETE FROM clientes WHERE idclie = :idclient LIMIT 1";
         $statement = $connect->prepare($query);
 
         $data = [
-           
-            
-            ':idclie' => $idclie
+            ':idclient' => $idclient
         ];
         $query_execute = $statement->execute($data);
 
         if($query_execute)
         {
-
-         echo '<script type="text/javascript">
-swal("¡Actualizado!", "Actualizado correctamente", "success").then(function() {
-            window.location = "../clientes/mostrar.php";
-        });
-        </script>';
-
+            echo '<script type="text/javascript">
+swal("¡Eliminado!", "Cliente eliminado correctamente", "error").then(function() {
+    window.location = "../clientes/mostrar.php";
+});
+</script>';
             exit(0);
         }
         else
         {
-           echo '<script type="text/javascript">
-swal("Error!", "Error al actualizar", "error").then(function() {
-            window.location = "../clientes/mostrar.php";
-        });
-        </script>';
+            echo '<script type="text/javascript">
+swal("Error!", "Error al eliminar el cliente", "error").then(function() {
+    window.location = "../clientes/mostrar.php";
+});
+</script>';
             exit(0);
         }
 
@@ -42,6 +37,4 @@ swal("Error!", "Error al actualizar", "error").then(function() {
         echo $e->getMessage();
     }
 }
-
-
 ?>

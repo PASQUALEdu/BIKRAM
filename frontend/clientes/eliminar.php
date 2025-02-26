@@ -66,12 +66,12 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="../administrador/escritorio.php">Panel administrativo</a></li>
                             <li class="breadcrumb-item"><a href="../clientes/mostrar.php">Clientes </a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Desactivar</li>
+                            <li class="breadcrumb-item active" aria-current="page">Eliminar</li>
                         </ol>
                     </nav>
                     <div class="card" style="min-height: 485px">
                         <div class="card-header card-header-text">
-                            <h4 class="card-title">¿Estás seguro de que quieres desactivarlo?</h4>
+                            <h4 class="card-title">¿Estás seguro de que quieres eliminarl?</h4>
                             <p class="category">Desactivar clientes reciente añadidos el dia de hoy</p>
                         </div>
 
@@ -134,7 +134,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
                                         <hr>
                                         <div class="form-group">
                                             <div class="col-sm-12">
-                                                <button name='stdltcst' class="btn btn-success text-white">Guardar</button>
+                                                <button name='stdltcst' class="btn btn-success text-white">Eliminar</button>
                                                 <a class="btn btn-danger text-white" href="../clientes/mostrar.php">Cancelar</a>
                                             </div>
                                         </div>
