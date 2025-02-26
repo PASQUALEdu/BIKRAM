@@ -9,9 +9,8 @@ if (isset($_POST['staddserv'])) {
     $meto = $_POST['txtmeto'];
     $total = $_POST['txtprec'];
     $cancel = $_POST['txtcanc'];
-    $profe = $_POST['txtprofe']; 
 
-    $d3 = $connect->prepare("INSERT INTO servicio (idplan, ini, fin, idclie, estod, meto, canc, profe) VALUES('$idplan', '$ini', '$fin', '$idclie', '$estod', '$meto', '$cancel', '$profe')");
+    $d3 = $connect->prepare("INSERT INTO servicio (idplan, ini, fin, idclie, estod, meto, canc) VALUES('$idplan', '$ini', '$fin', '$idclie', '$estod', '$meto', '$cancel')");
 
     $d4 = $connect->prepare("INSERT INTO ingresos (detalle, total, fec) VALUES('VENTA DE MEMBRESIAS', '$total', '$ini')");
 

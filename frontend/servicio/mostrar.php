@@ -73,7 +73,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
                         <div class="card-content table-responsive">
                             <?php
                             require '../../backend/bd/ctconex.php';
-                            $sentencia = $connect->prepare("SELECT servicio.profe, servicio.idservc, plan.idplan, plan.foto, plan.nompla, plan.prec AS total, servicio.ini, servicio.fin, clientes.idclie, clientes.numid, clientes.nomcli, clientes.apecli, clientes.naci, clientes.celu, clientes.correo, servicio.estod, servicio.fere, servicio.canc FROM servicio INNER JOIN plan ON servicio.idplan = plan.idplan INNER JOIN clientes ON servicio.idclie = clientes.idclie ORDER BY idservc DESC;");
+                            $sentencia = $connect->prepare("SELECT servicio.idservc, plan.idplan, plan.foto, plan.nompla, plan.prec AS total, servicio.ini, servicio.fin, clientes.idclie, clientes.numid, clientes.nomcli, clientes.apecli, clientes.naci, clientes.celu, clientes.correo, servicio.estod, servicio.fere, servicio.canc FROM servicio INNER JOIN plan ON servicio.idplan = plan.idplan INNER JOIN clientes ON servicio.idclie = clientes.idclie ORDER BY idservc DESC;");
 
                             $sentencia->execute();
 

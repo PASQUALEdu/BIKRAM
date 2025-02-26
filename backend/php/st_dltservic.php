@@ -1,13 +1,13 @@
 <?php
-  
-
-  if(isset($_POST['stdltserv']))
+// Asegúrate de haber incluido la conexión ($connect) previamente o inclúyela aquí
+if(isset($_POST['stdltserv']))
 {
     $idservc = $_POST['txtidc'];
     
     try {
 
-        $query = "UPDATE servicio SET  estod='Inactivo' WHERE idservc=:idservc LIMIT 1";
+        // Se utiliza DELETE para eliminar el servicio de forma permanente
+        $query = "DELETE FROM servicio WHERE idservc = :idservc LIMIT 1";
         $statement = $connect->prepare($query);
 
         $data = [
@@ -17,22 +17,20 @@
 
         if($query_execute)
         {
-
-         echo '<script type="text/javascript">
-swal("¡Actualizado!", "Actualizado correctamente", "success").then(function() {
-            window.location = "../servicio/mostrar.php";
-        });
-        </script>';
-
+            echo '<script type="text/javascript">
+swal("¡Eliminado!", "Servicio eliminado correctamente", "error").then(function() {
+    window.location = "../servicio/mostrar.php";
+});
+</script>';
             exit(0);
         }
         else
         {
-           echo '<script type="text/javascript">
-swal("Error!", "Error al actualizar", "error").then(function() {
-            window.location = "../servicio/mostrar.php";
-        });
-        </script>';
+            echo '<script type="text/javascript">
+swal("Error!", "Error al eliminar el servicio", "error").then(function() {
+    window.location = "../servicio/mostrar.php";
+});
+</script>';
             exit(0);
         }
 
@@ -40,6 +38,4 @@ swal("Error!", "Error al actualizar", "error").then(function() {
         echo $e->getMessage();
     }
 }
-
-
 ?>

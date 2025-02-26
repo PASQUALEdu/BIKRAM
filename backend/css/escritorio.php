@@ -16,7 +16,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-        <title>SMAF GYM</title>
+        <title>BIKRAM YOGA</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../../backend/css/bootstrap.min.css">
         <!----css3---->
@@ -45,7 +45,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
             <!-- Sidebar  -->
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3><img src="../../backend/img/favicon.webp" class="img-fluid" /><span>SMAF GYM</span></h3>
+                    <h3><img src="../../backend/img/favicon.webp" class="img-fluid" /><span>BIKRAM YOGA</span></h3>
                 </div>
                 <ul class="list-unstyled components">
                     <li class="active">

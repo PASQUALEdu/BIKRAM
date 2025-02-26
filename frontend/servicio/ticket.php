@@ -8,7 +8,7 @@ $pdf->SetMargins(17, 17, 17);
 $pdf->AddPage();
 
 # Logo de la empresa formato png #
-$pdf->Image('../../backend/img/logo.png', 165, 12, 35, 35, 'PNG');
+$pdf->Image('../../backend/img/bikram_yoga.jpg', 165, 12, 35, 35, 'JPG');
 
 require '../../backend/bd/ctconex.php';
 
@@ -26,25 +26,25 @@ while ($row = $stmt->fetch()) {
     # Encabezado y datos de la empresa #
     $pdf->SetFont('Arial', 'B', 16);
     $pdf->SetTextColor(32, 100, 210);
-    $pdf->Cell(150, 10, iconv("UTF-8", "ISO-8859-1", strtoupper("SMAF - Centro de Acondicionamiento")), 0, 0, 'L');
+    $pdf->Cell(150, 10, iconv("UTF-8", "ISO-8859-1", strtoupper("BIKRAM YOGA")), 0, 0, 'L');
 
     $pdf->Ln(9);
 
     $pdf->SetFont('Arial', '', 10);
     $pdf->SetTextColor(39, 39, 51);
-    $pdf->Cell(150, 9, iconv("UTF-8", "ISO-8859-1", "CUIL: 0000000000"), 0, 0, 'L');
+
 
     $pdf->Ln(5);
 
-    $pdf->Cell(150, 9, iconv("UTF-8", "ISO-8859-1", "Direccion Goya, Corrientes"), 0, 0, 'L');
+    $pdf->Cell(150, 9, iconv("UTF-8", "ISO-8859-1", "Cuidad de México, Taxqueña"), 0, 0, 'L');
 
     $pdf->Ln(5);
 
-    $pdf->Cell(150, 9, iconv("UTF-8", "ISO-8859-1", "Teléfono: 3777847394"), 0, 0, 'L');
+    $pdf->Cell(150, 9, iconv("UTF-8", "ISO-8859-1", "Teléfono: 0000"), 0, 0, 'L');
 
     $pdf->Ln(5);
 
-    $pdf->Cell(150, 9, iconv("UTF-8", "ISO-8859-1", "Email: sebamontenegro@gmail.com"), 0, 0, 'L');
+    $pdf->Cell(150, 9, iconv("UTF-8", "ISO-8859-1", "Email: bikramyoga@gmail.com"), 0, 0, 'L');
 
     $pdf->Ln(10);
 
@@ -64,10 +64,10 @@ while ($row = $stmt->fetch()) {
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->Cell(50, 7, iconv("UTF-8", "ISO-8859-1", "Cajero:"), 0, 0, 'L');
     $pdf->SetTextColor(97, 97, 97);
-    $pdf->Cell(100, 7, iconv("UTF-8", "ISO-8859-1", "Seba Montenegro"), 0, 0, 'L');
+    $pdf->Cell(100, 7, iconv("UTF-8", "ISO-8859-1", "Bikram Yoga"), 0, 0, 'L');
     $pdf->SetFont('Arial', 'B', 10);
     $pdf->SetTextColor(39, 39, 51);
-    $pdf->Cell(50, 7, iconv("UTF-8", "ISO-8859-1", strtoupper("1")), 0, 0, 'C');
+
 
 
     $pdf->Ln(10);
@@ -89,10 +89,7 @@ while ($row = $stmt->fetch()) {
 
     $pdf->Ln(7);
 
-    $pdf->SetTextColor(39, 39, 51);
-    $pdf->Cell(6, 7, iconv("UTF-8", "ISO-8859-1", "Dir:"), 0, 0);
-    $pdf->SetTextColor(97, 97, 97);
-    $pdf->Cell(109, 7, iconv("UTF-8", "ISO-8859-1", "Goya, Corrientes"), 0, 0);
+
 
     $pdf->Ln(9);
 
@@ -117,9 +114,9 @@ while ($row = $stmt->fetch()) {
     /*----------  Detalles de la tabla  ----------*/
     $pdf->Cell(90, 7, iconv("UTF-8", "ISO-8859-1", $row['nompla']), 'L', 0, 'C');
     $pdf->Cell(15, 7, iconv("UTF-8", "ISO-8859-1", "1"), 'L', 0, 'C');
-    $pdf->Cell(25, 7, iconv("UTF-8", "ISO-8859-1", "$" . $row['prec'] . " ARS"), 'L', 0, 'C');
-    $pdf->Cell(19, 7, iconv("UTF-8", "ISO-8859-1", "$0.00 ARS"), 'L', 0, 'C');
-    $pdf->Cell(32, 7, iconv("UTF-8", "ISO-8859-1", "$" . $row['prec'] . " ARS"), 'LR', 0, 'C');
+    $pdf->Cell(25, 7, iconv("UTF-8", "ISO-8859-1", "$" . $row['prec'] . " MX"), 'L', 0, 'C');
+    $pdf->Cell(19, 7, iconv("UTF-8", "ISO-8859-1", "$0.00 MX"), 'L', 0, 'C');
+    $pdf->Cell(32, 7, iconv("UTF-8", "ISO-8859-1", "$" . $row['prec'] . " MX"), 'LR', 0, 'C');
     $pdf->Ln(7);
     /*----------  Fin Detalles de la tabla  ----------*/
 
@@ -131,7 +128,7 @@ while ($row = $stmt->fetch()) {
     $pdf->Cell(100, 7, iconv("UTF-8", "ISO-8859-1", ''), 'T', 0, 'C');
     $pdf->Cell(15, 7, iconv("UTF-8", "ISO-8859-1", ''), 'T', 0, 'C');
     $pdf->Cell(32, 7, iconv("UTF-8", "ISO-8859-1", "SUBTOTAL"), 'T', 0, 'C');
-    $pdf->Cell(34, 7, iconv("UTF-8", "ISO-8859-1", "+ $" . $row['prec'] . " ARS"), 'T', 0, 'C');
+    $pdf->Cell(34, 7, iconv("UTF-8", "ISO-8859-1", "+ $" . $row['prec'] . " MX"), 'T', 0, 'C');
 
     $pdf->Ln(7);
 
@@ -145,21 +142,21 @@ while ($row = $stmt->fetch()) {
 
 
     $pdf->Cell(32, 7, iconv("UTF-8", "ISO-8859-1", "TOTAL A PAGAR"), 'T', 0, 'C');
-    $pdf->Cell(34, 7, iconv("UTF-8", "ISO-8859-1", "$" . $row['prec'] . "ARS"), 'T', 0, 'C');
+    $pdf->Cell(34, 7, iconv("UTF-8", "ISO-8859-1", "$" . $row['prec'] . "MX"), 'T', 0, 'C');
 
     $pdf->Ln(7);
 
     $pdf->Cell(100, 7, iconv("UTF-8", "ISO-8859-1", ''), '', 0, 'C');
     $pdf->Cell(15, 7, iconv("UTF-8", "ISO-8859-1", ''), '', 0, 'C');
     $pdf->Cell(32, 7, iconv("UTF-8", "ISO-8859-1", "TOTAL PAGADO"), '', 0, 'C');
-    $pdf->Cell(34, 7, iconv("UTF-8", "ISO-8859-1", "$" . $row['canc'] . "ARS"), '', 0, 'C');
+    $pdf->Cell(34, 7, iconv("UTF-8", "ISO-8859-1", "$" . $row['canc'] . "MX"), '', 0, 'C');
 
     $pdf->Ln(7);
 
     $pdf->Cell(100, 7, iconv("UTF-8", "ISO-8859-1", ''), '', 0, 'C');
     $pdf->Cell(15, 7, iconv("UTF-8", "ISO-8859-1", ''), '', 0, 'C');
     $pdf->Cell(32, 7, iconv("UTF-8", "ISO-8859-1", "USTED AHORRA"), '', 0, 'C');
-    $pdf->Cell(34, 7, iconv("UTF-8", "ISO-8859-1", "$0.00 ARS"), '', 0, 'C');
+    $pdf->Cell(34, 7, iconv("UTF-8", "ISO-8859-1", "$0.00 MX"), '', 0, 'C');
 
     $pdf->Ln(12);
 
@@ -173,10 +170,9 @@ while ($row = $stmt->fetch()) {
     # Codigo de barras #
     $pdf->SetFillColor(39, 39, 51);
     $pdf->SetDrawColor(23, 83, 201);
-    $pdf->Code128(72, $pdf->GetY(), "COD000001V0001", 70, 20);
     $pdf->SetXY(12, $pdf->GetY() + 21);
     $pdf->SetFont('Arial', '', 12);
-    $pdf->MultiCell(0, 5, iconv("UTF-8", "ISO-8859-1", "COD000001V0001"), 0, 'C', false);
+
 }
 
 # Nombre del archivo PDF #

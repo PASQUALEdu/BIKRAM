@@ -124,12 +124,7 @@ if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6 col-lg-6">
-                                        <div class="form-group">
-                                            <label for="email">Profesor<span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control" required name="txtprofe" placeholder="Nombre del profesor">
-                                        </div>
-                                    </div>
+                                    
 
                                     <div class="col-md-6 col-lg-6">
                                         <div class="form-group">
