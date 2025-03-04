@@ -31,7 +31,7 @@ ob_start();
      <!--google material icon-->
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
       rel="stylesheet">
-      <link rel="icon" type="image/png" href="../../backend/img/favicon.webp"/>
+      <link rel="icon" type="image/jpg" href="../../backend/img/yoga2.jpg"/>
   </head>
   <body>
   
@@ -41,7 +41,7 @@ ob_start();
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3><img src="../../backend/img/favicon.webp" class="img-fluid"/><span>BIKRAM YOGA</span></h3>
+                <h3><img src="../../backend/img/yoga2.jpg" class="img-fluid"/><span>BIKRAM YOGA</span></h3>
             </div>
             <ul class="list-unstyled components">
                <li  class="">
@@ -193,7 +193,6 @@ ob_start();
         <!-- Page Content  -->
         <div id="content">
           <div class='pre-loader'>
-    <img class='loading-gif' alt='loading' src="https://media.giphy.com/media/TPFdnUyWNNQYMke6gU/giphy.gif"/>
 </div>
           <div class="top-navbar">
             <nav class="navbar navbar-expand-lg">
@@ -382,4 +381,4 @@ if($sentencia){
 <?php }else{ 
     header('Location: ../erro404.php');
  } ?>
- <?php ob_end_flush(); ?>     
+ <?php ob_end_flush(); ?>       
