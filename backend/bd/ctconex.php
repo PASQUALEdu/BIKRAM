@@ -1,29 +1,34 @@
 <?php
-if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    }
+// Inicia la sesión sólo si no existe
+if(!isset($_SESSION)) {
+    session_start();
+}
 
-// Define database
-define('dbhost', 'localhost');
-define('dbuser', 'root');
-define('dbpass', '');
-define('dbname', 'gym');
+// Define constantes de conexión únicamente si no están definidas
+if(!defined('DBHOST')) {
+    define('DBHOST', 'localhost');
+}
+if(!defined('DBUSER')) {
+    define('DBUSER', 'root');
+}
+if(!defined('DBPASS')) {
+    define('DBPASS', '');
+}
+if(!defined('DBNAME')) {
+    define('DBNAME', 'gym');
+}
 
-// Connecting database
+// Conexión a la base de datos
 try {
-    $connect = new PDO("mysql:host=".dbhost."; dbname=".dbname, dbuser, dbpass);
-    $connect->query("set names utf8;");
-    // $connect->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
-    //$connect->setAttribute( PDO::ATTR_EMULATE_PREPARES, true );
+    // Usamos las constantes definidas
+    $connect = new PDO("mysql:host=".DBHOST."; dbname=".DBNAME, DBUSER, DBPASS);
+    $connect->query("SET NAMES utf8;");
+
+    // Configuraciones de PDO
     $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $connect->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-}
-catch(PDOException $e) {
+    
+} catch (PDOException $e) {
     echo $e->getMessage();
 }
-//---------------
-
-
 ?>
-
